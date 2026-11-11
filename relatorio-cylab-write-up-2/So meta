@@ -1,0 +1,39 @@
+# So Meta
+
+## 1. Objetivo
+
+O objetivo do desafio é analisar uma imagem PNG e encontrar uma informação escondida em seus metadados, que contém a flag.
+
+## 2. Análise do arquivo
+
+Durante a análise da imagem `pico_img.png`, foi identificado que o conteúdo visual não apresentava nenhuma informação suspeita.
+
+Entretanto, arquivos PNG podem armazenar informações adicionais em seus metadados, incluindo textos que não aparecem diretamente na imagem.
+
+A investigação foi direcionada aos metadados do arquivo, onde foi identificado um campo chamado `Artist`.
+
+## 3. Processo de resolução
+
+Através da análise dos metadados, foi possível localizar uma informação escondida no campo `Artist`.
+
+O arquivo PNG utiliza um bloco de informações chamado `tEXt`, que permite armazenar dados textuais dentro da própria imagem.
+
+Ao verificar esse campo, foi encontrada a flag do desafio.
+
+## 4. Resultado
+
+**Flag encontrada:**
+
+```text
+academy{s0_m3ta_b52e28f5}
+```
+
+## 5. Conclusão
+
+O desafio demonstrou como informações podem ser escondidas nos metadados de arquivos de imagem.
+
+Mesmo que uma imagem não apresente nada suspeito visualmente, ela pode conter informações adicionais armazenadas em sua estrutura interna.
+
+Através da investigação dos metadados e da identificação do campo `Artist`, foi possível encontrar a flag.
+
+A atividade permitiu praticar análise de arquivos PNG, identificação de metadados e investigação de informações ocultas.

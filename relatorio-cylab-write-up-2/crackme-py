@@ -1,0 +1,46 @@
+# crackme-py
+
+## 1. Objetivo
+
+O objetivo do desafio é analisar o código-fonte Python e descobrir uma mensagem escondida na variável `bezos_cc_secret`.
+
+## 2. Análise do código-fonte
+
+Durante a análise do arquivo `crackme.py`, foi identificada a variável `bezos_cc_secret`, que armazena uma sequência de caracteres aparentemente sem sentido.
+
+Também foi encontrada a função `decode_secret()`, responsável por realizar a decodificação da mensagem.
+
+Ao observar o código, foi possível identificar o uso da cifra ROT47, por meio da variável `rotate_const`, definida com o valor 47.
+
+Outro detalhe observado é que a função `decode_secret()` não é chamada no fluxo principal do programa. A última instrução executa apenas a função `choose_greatest()`.
+
+## 3. Processo de resolução
+
+Para descobrir o conteúdo da mensagem, foi utilizado o CyberChef.
+
+O procedimento realizado foi:
+
+1. Copiar o conteúdo armazenado na variável `bezos_cc_secret`.
+2. Inserir a sequência no campo de entrada do CyberChef.
+3. Selecionar a operação ROT47.
+4. Aplicar a transformação e verificar o resultado.
+
+Após a aplicação do ROT47, foi possível recuperar a mensagem original e identificar a flag.
+
+## 4. Resultado
+
+**Flag encontrada:**
+
+```text
+academy{1m_4_p34nut_a20db6f76f27d8}
+```
+
+## 5. Conclusão
+
+O desafio demonstrou a importância da análise de código-fonte em atividades de engenharia reversa.
+
+Através da identificação da variável que armazenava a mensagem e da análise da função `decode_secret()`, foi possível reconhecer a utilização da cifra ROT47.
+
+Com o auxílio do CyberChef, a mensagem foi decodificada sem a necessidade de executar o programa Python.
+
+O exercício permitiu compreender como identificar informações ocultas em códigos-fonte e reconhecer métodos simples de codificação.

@@ -1,0 +1,42 @@
+# First Find
+
+## 1. Objetivo
+
+O objetivo do desafio é extrair um arquivo compactado e localizar um arquivo específico chamado `uber-secret.txt`.
+
+## 2. Análise do desafio
+
+O desafio disponibiliza um arquivo ZIP contendo uma estrutura de diretórios e arquivos.
+
+A tarefa consiste em navegar por essa estrutura até encontrar o arquivo `uber-secret.txt`.
+
+## 3. Processo de resolução
+
+A resolução foi realizada utilizando o Explorador de Arquivos do Windows.
+
+O procedimento realizado foi:
+
+1. Baixar o arquivo ZIP disponibilizado no desafio.
+2. Abrir o arquivo utilizando o Explorador de Arquivos.
+3. Acessar o segundo arquivo apresentado.
+4. Navegar pelos diretórios e subdiretórios disponíveis.
+5. Continuar verificando as pastas até localizar o arquivo `uber-secret.txt`.
+6. Abrir o arquivo utilizando o Bloco de Notas para visualizar seu conteúdo.
+
+Após localizar e abrir o arquivo, foi possível encontrar a flag solicitada pelo desafio.
+
+## 4. Resultado
+
+**Flag encontrada:**
+
+```text
+academy{f1nd_15_f457_ab443fd1}
+```
+
+## 5. Conclusão
+
+O desafio demonstrou a importância da navegação e organização de arquivos em sistemas operacionais.
+
+Por meio do Explorador de Arquivos do Windows, foi possível percorrer uma estrutura de diretórios, localizar um arquivo específico e visualizar seu conteúdo utilizando o Bloco de Notas.
+
+A atividade permitiu praticar conceitos básicos de manipulação de arquivos e navegação em diretórios.

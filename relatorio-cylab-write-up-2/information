@@ -1,0 +1,56 @@
+# Cat.jpg – Análise de metadados
+
+## 1. Objetivo
+
+O objetivo do desafio é analisar uma imagem JPG e encontrar uma informação escondida em seus metadados para recuperar a flag.
+
+## 2. Análise do arquivo
+
+Inicialmente, o arquivo `cat.jpg` foi aberto utilizando o Bloco de Notas do Windows.
+
+Ao analisar o conteúdo, foi possível observar diversos caracteres que não eram legíveis, além de informações relacionadas à estrutura interna da imagem.
+
+Durante a investigação, foi identificado um trecho contendo informações no formato XMP (Extensible Metadata Platform).
+
+Dentro desse trecho, foi localizada a seguinte variável:
+
+```xml
+<cc:license rdf:resource='YWNhZGVteXt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9'/>
+```
+
+O valor armazenado em `rdf:resource` chamou a atenção por apresentar uma sequência de caracteres aparentemente codificada.
+
+## 3. Processo de resolução
+
+Após identificar a sequência suspeita, foi utilizado o CyberChef para descobrir qual método de codificação havia sido aplicado.
+
+O procedimento realizado foi:
+
+1. Abrir o arquivo `cat.jpg` no Bloco de Notas.
+2. Analisar o conteúdo interno da imagem.
+3. Identificar os metadados XMP.
+4. Localizar a variável `cc:license`.
+5. Copiar a sequência armazenada em `rdf:resource`.
+6. Inserir a sequência no CyberChef.
+7. Utilizar a função Magic para identificar automaticamente o método de codificação.
+8. Após a identificação, decodificar a sequência e recuperar a flag.
+
+O resultado revelou que a sequência estava codificada em Base64.
+
+## 4. Resultado
+
+**Flag encontrada:**
+
+```text
+academy{the_m3tadata_1s_modified}
+```
+
+## 5. Conclusão
+
+O desafio demonstrou como informações podem ser escondidas dentro dos metadados de arquivos de imagem.
+
+Através da análise do conteúdo interno do arquivo JPG, foi possível localizar uma sequência codificada no campo `cc:license`.
+
+Com o auxílio do CyberChef e da função Magic, foi identificado o uso de Base64, permitindo recuperar a flag.
+
+A atividade permitiu praticar análise de arquivos, investigação de metadados, identificação de codificações e conceitos básicos de esteganografia.

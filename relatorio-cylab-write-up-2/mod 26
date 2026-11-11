@@ -1,0 +1,49 @@
+# Mod 26 – ROT13
+
+## 1. Objetivo
+
+O objetivo do desafio é decodificar uma mensagem criptografada utilizando a cifra ROT13 e recuperar a flag escondida no arquivo `values.txt`.
+
+## 2. Análise do arquivo
+
+O desafio disponibiliza um arquivo chamado `values.txt`, contendo uma sequência de caracteres aparentemente sem sentido.
+
+Ao analisar o conteúdo, foi identificada a seguinte mensagem:
+
+```text
+npnqrzl{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_5p5s5o36}
+```
+
+A mensagem apresenta características de uma cifra de substituição, na qual as letras são deslocadas dentro do alfabeto.
+
+## 3. Processo de resolução
+
+O enunciado apresenta uma dica sobre a utilização da cifra ROT13.
+
+Para realizar a decodificação, foi utilizado o CyberChef.
+
+O procedimento realizado foi:
+
+1. Baixar e abrir o arquivo `values.txt`.
+2. Copiar o conteúdo criptografado.
+3. Inserir o texto no campo de entrada do CyberChef.
+4. Selecionar a operação ROT13.
+5. Aplicar a transformação e verificar o resultado.
+
+Após a aplicação do ROT13, o texto foi decodificado, revelando a flag.
+
+## 4. Resultado
+
+**Flag encontrada:**
+
+```text
+academy{next_time_I'll_try_2_rounds_of_rot13_5c5f5b36}
+```
+
+## 5. Conclusão
+
+O desafio demonstrou o funcionamento da cifra ROT13, um método simples de substituição de caracteres baseado no deslocamento de 13 posições no alfabeto.
+
+Através da análise do arquivo `values.txt` e da utilização do CyberChef, foi possível identificar e reverter a codificação, recuperando a flag.
+
+A atividade permitiu compreender o funcionamento da cifra ROT13 e sua relação com o conceito de módulo 26, utilizado para representar os deslocamentos dentro do alfabeto.
